@@ -26,6 +26,7 @@ presentes no documento.
 
 Fluxo simplificado:
 
+```text
 PDF
  ↓
 Extração de texto
@@ -37,6 +38,7 @@ Agente Agno
 LLM via Groq
  ↓
 Resposta baseada no documento
+```
 
 ## 🛠️ Tecnologias
 
@@ -50,6 +52,7 @@ Resposta baseada no documento
 
 ## 📂 Estrutura
 
+```text
 docagent-ai/
 ├── data/
 │   └── exemplo.pdf
@@ -63,29 +66,49 @@ docagent-ai/
 ├── pyproject.toml
 ├── uv.lock
 ├── .env.example
+├── .gitignore\n
 └── README.md
+```
 
 ## 🚀 Executando o projeto
 
-Clone o repositório:
+### 1. Clone o repositório
 
-git clone <URL-DO-REPOSITORIO>
+```bash
+git clone https://github.com/DavidMaciel86/docagent-ai.git
+```
 
-Entre no diretório:
+### 2. Entre no diretório
 
+```bash
 cd docagent-ai
+```
 
-Instale as dependências:
+### 3. Instale as dependências
 
+O projeto utiliza o UV para gerenciamento de dependências:
+
+```bash
 uv sync
+```
 
-Crie um arquivo `.env` baseado em `.env.example`:
+### 4. Configure a variável de ambiente
 
+Crie um arquivo `.env` na raiz do projeto com base em `.env.example`:
+
+```env
 GROQ_API_KEY=sua_chave_aqui
+```
 
-Execute:
+> O arquivo `.env` contém informações sensíveis e não deve ser versionado.
 
+### 5. Execute o agente
+
+```bash
 uv run main.py
+```
+
+Após a inicialização, faça perguntas sobre o documento carregado. Para encerrar, digite `sair`.
 
 ## 💬 Exemplos de perguntas
 
