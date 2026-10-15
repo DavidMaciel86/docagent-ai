@@ -66,7 +66,7 @@ docagent-ai/
 ├── pyproject.toml
 ├── uv.lock
 ├── .env.example
-├── .gitignore\n
+├── .gitignore
 └── README.md
 ```
 

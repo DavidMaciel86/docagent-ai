@@ -14,7 +14,7 @@ load_dotenv()
 def criar_agente() -> Agent:
     return Agent(
         model=Groq(
-            id="llama-3.3-70b-versatile",
+            id=os.getenv("GPT_OSS_120B"),
             api_key=os.getenv("GROQ_API_KEY"),
         ),
         instructions=DOCUMENT_AGENT_INSTRUCTIONS,
